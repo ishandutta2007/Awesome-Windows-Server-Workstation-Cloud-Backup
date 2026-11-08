@@ -8,7 +8,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Mentioned in Awesome" /></a>
   <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0 1.0" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Windows-Server-Workstation-Cloud-Backup/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Windows-Server-Workstation-Cloud-Backup?style=flat&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Windows-Server-Workstation-Cloud-Backup/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Windows-Server-Workstation-Cloud-Backup?style=flat&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Windows-Server-Workstation-Cloud-Backup/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Windows-Server-Workstation-Cloud-Backup?style=flat&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -77,9 +77,9 @@ The table below catalogs leading commercial and hosted Windows Server and Workst
 
 ## 🟩 Open-Source Software
 
-Self-hosted, transparent, and community-driven tools for backing up Windows Server and Workstation environments to local storage, NAS/SAN, or cloud object storage. All listed projects are sorted in **descending order by GitHub star count** ⭐.
+Self-hosted, transparent, and community-driven tools for backing up Windows Server and Workstation environments to local storage, NAS/SAN, or cloud object storage. All listed projects are sorted in **descending order by GitHub Stars_Count** ⭐.
 
-| 🧰 Tool | ⭐ GitHub Stars | 💻 Primary Language / Stack | 📜 License | 📸 Windows Snapshot (VSS) | 🌐 Primary Cloud Targets |
+| 🧰 Tool | ⭐ GitHub_Stars | 💻 Primary Language / Stack | 📜 License | 📸 Windows Snapshot (VSS) | 🌐 Primary Cloud Targets |
 |:---|:---|:---|:---|:---|:---|
 | **[Rclone](https://github.com/rclone/rclone)** | [![Stars](https://img.shields.io/github/stars/rclone/rclone?style=social&color=white)](https://github.com/rclone/rclone/stargazers) | Go | MIT | External script wrapper | S3, Azure Blob, Google Cloud Storage, B2, OneDrive, SFTP (70+ backends) |
 | **[Restic](https://github.com/restic/restic)** | [![Stars](https://img.shields.io/github/stars/restic/restic?style=social&color=white)](https://github.com/restic/restic/stargazers) | Go | BSD-2-Clause | ❌ (File-level / VSS via script) | AWS S3, Azure Blob, Wasabi, Backblaze B2, Google Cloud Storage, SFTP, REST |
@@ -194,7 +194,7 @@ Contributions are warmly welcomed! If you know of an active open-source Windows 
 
 1. 🍴 Fork the repository.
 2. ✍️ Add the tool to the appropriate section maintaining alphabetical or sorted conventions.
-3. 🔗 Include project URL, GitHub star badge, license, and Windows integration details.
+3. 🔗 Include project URL, GitHub Stars_Badge, license, and Windows integration details.
 4. 🚀 Submit a Pull Request with a concise summary of the addition.
 
 ---
