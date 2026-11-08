@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0c1938" />
+      <stop offset="100%" stop-color="#070c18" />
+    </linearGradient>
+
+    <!-- Flow Line Gradient -->
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#4facfe" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Cloud Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      fill: #00f2fe;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .desc-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      fill: #94a3b8;
+    }
+    .badge-pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      fill: #e2e8f0;
+    }
+
+    /* CSS Animations for dynamic elements */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(1.04); }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-15px) translateX(10px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+    }
+    @keyframes dashCycle {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -200; }
+    }
+    @keyframes orbitNode {
+      0% { transform: rotate(0deg) translateX(35px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(35px) rotate(-360deg); }
+    }
+
+    .pulse-layer {
+      animation: pulseGlow 5s ease-in-out infinite;
+      transform-origin: 960px 170px;
+    }
+    .flow-stream {
+      stroke-dasharray: 8 12;
+      animation: dashCycle 8s linear infinite;
+    }
+    .flow-stream-reverse {
+      stroke-dasharray: 6 10;
+      animation: dashCycle 6s linear infinite reverse;
+    }
+    .particle-1 { animation: floatParticle 4s ease-in-out infinite; }
+    .particle-2 { animation: floatParticle 6s ease-in-out infinite 1s; }
+    .particle-3 { animation: floatParticle 5s ease-in-out infinite 2s; }
+  </style>
+
+  <!-- Deep Tech Background -->
+  <rect width="1200" height="340" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Background Decorative Grid Lines -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="68" x2="1200" y2="68" />
+    <line x1="0" y1="136" x2="1200" y2="136" />
+    <line x1="0" y1="204" x2="1200" y2="204" />
+    <line x1="0" y1="272" x2="1200" y2="272" />
+    <line x1="240" y1="0" x2="240" y2="340" />
+    <line x1="480" y1="0" x2="480" y2="340" />
+    <line x1="720" y1="0" x2="720" y2="340" />
+    <line x1="960" y1="0" x2="960" y2="340" />
+  </g>
+
+  <!-- Dynamic Glowing Background Orbs & Flows (Positioned behind foreground) -->
+  <g class="pulse-layer">
+    <circle cx="960" cy="170" r="110" fill="#00f2fe" opacity="0.12" filter="url(#glow)" />
+    <circle cx="960" cy="170" r="70" fill="#7f00ff" opacity="0.18" filter="url(#glow)" />
+  </g>
+
+  <!-- Animated Data Ingestion Flows (Right Side Architecture Graphic) -->
+  <g>
+    <!-- Curve from Workstation Node to Cloud -->
+    <path d="M 810 240 C 870 240, 890 190, 930 180" fill="none" stroke="url(#flowGrad)" stroke-width="2.5" class="flow-stream" />
+    <!-- Curve from Windows Server Node to Cloud -->
+    <path d="M 810 100 C 870 100, 890 150, 930 160" fill="none" stroke="url(#flowGrad)" stroke-width="2.5" class="flow-stream-reverse" />
+    <!-- Replicated offsite vault pipe -->
+    <path d="M 990 170 C 1040 170, 1070 170, 1110 170" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 6" class="flow-stream" opacity="0.8" />
+  </g>
+
+  <!-- Network Floating Particles (Background dynamics) -->
+  <g>
+    <circle cx="860" cy="140" r="3" fill="#00f2fe" class="particle-1" />
+    <circle cx="900" cy="220" r="2.5" fill="#a78bfa" class="particle-2" />
+    <circle cx="1060" cy="130" r="3" fill="#38bdf8" class="particle-3" />
+    <circle cx="1040" cy="210" r="2" fill="#00f2fe" class="particle-1" />
+  </g>
+
+  <!-- Visual Nodes Graphic (Right side) -->
+  <g>
+    <!-- Windows Server Node -->
+    <g transform="translate(730, 75)">
+      <rect width="80" height="50" rx="8" fill="#132347" stroke="#38bdf8" stroke-width="1.5" />
+      <line x1="740" y1="92" x2="790" y2="92" stroke="#38bdf8" stroke-width="2" />
+      <line x1="740" y1="102" x2="790" y2="102" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="798" cy="92" r="2" fill="#22c55e" />
+      <circle cx="798" cy="102" r="2" fill="#22c55e" />
+      <text x="40" y="32" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#94a3b8">SERVER</text>
+    </g>
+
+    <!-- Workstation Node -->
+    <g transform="translate(730, 215)">
+      <rect width="80" height="50" rx="8" fill="#132347" stroke="#38bdf8" stroke-width="1.5" />
+      <rect x="742" y="223" width="56" height="30" rx="4" fill="#09142b" stroke="#00f2fe" stroke-width="1" />
+      <line x1="760" y1="258" x2="780" y2="258" stroke="#38bdf8" stroke-width="2" />
+      <text x="40" y="30" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#94a3b8">ENDPOINT</text>
+    </g>
+
+    <!-- Central Cloud Target Node -->
+    <g transform="translate(930, 135)" filter="url(#subtleGlow)">
+      <rect width="70" height="70" rx="16" fill="#1e293b" stroke="#00f2fe" stroke-width="2" />
+      <!-- Cloud Icon -->
+      <path d="M 23 45 A 9 9 0 0 1 20 33 A 14 14 0 0 1 45 27 A 11 11 0 0 1 54 36 A 8 8 0 0 1 50 45 Z" fill="#00f2fe" opacity="0.9" />
+    </g>
+
+    <!-- WORM Immutable Vault Node -->
+    <g transform="translate(1085, 142)">
+      <rect width="56" height="56" rx="12" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.5" />
+      <!-- Shield / Lock icon -->
+      <path d="M 28 17 L 38 21 V 30 C 38 36, 28 41, 28 41 C 28 41, 18 36, 18 30 V 21 Z" fill="none" stroke="#c084fc" stroke-width="2" />
+      <circle cx="28" cy="28" r="2.5" fill="#c084fc" />
+    </g>
+  </g>
+
+  <!-- Foreground Title and Information Content (Strictly in foreground) -->
+  <g transform="translate(70, 75)">
+    <!-- Subtitle / Tagline pill -->
+    <rect x="0" y="0" width="370" height="26" rx="13" fill="#0369a1" fill-opacity="0.3" stroke="#0284c7" stroke-width="1" />
+    <text x="14" y="18" class="subtitle-text">ENTERPRISE DATA RESILIENCE &amp; BCDR</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" class="title-text">Windows Server &amp; Workstation</text>
+    <text x="0" y="112" class="title-text" fill="#38bdf8">Cloud Backup Ecosystem</text>
+
+    <!-- Explanatory Description -->
+    <text x="0" y="148" class="desc-text">Curated guide to enterprise SaaS platforms, immutable cloud storage &amp; open-source engines.</text>
+
+    <!-- Feature Attribute Pills -->
+    <g transform="translate(0, 175)">
+      <!-- VSS Snapshot Pill -->
+      <rect x="0" y="0" width="130" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+      <circle cx="15" cy="14" r="4" fill="#38bdf8" />
+      <text x="28" y="18" class="badge-pill-text">VSS Snapshots</text>
+
+      <!-- Immutable WORM Pill -->
+      <rect x="142" y="0" width="145" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+      <circle cx="157" cy="14" r="4" fill="#a855f7" />
+      <text x="170" y="18" class="badge-pill-text">S3 Object Lock</text>
+
+      <!-- CBT Pill -->
+      <rect x="299" y="0" width="135" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+      <circle cx="314" cy="14" r="4" fill="#22c55e" />
+      <text x="327" y="18" class="badge-pill-text">CBT Fast Sync</text>
+
+      <!-- Open Source Pill -->
+      <rect x="446" y="0" width="130" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+      <circle cx="461" cy="14" r="4" fill="#f59e0b" />
+      <text x="474" y="18" class="badge-pill-text">Open Source</text>
+    </g>
+  </g>
+</svg>
