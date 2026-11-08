@@ -77,7 +77,7 @@ The table below catalogs leading commercial and hosted Windows Server and Workst
 
 ## 🟩 Open-Source Software
 
-Self-hosted, transparent, and community-driven tools for backing up Windows Server and Workstation environments to local storage, NAS/SAN, or cloud object storage. All listed projects are sorted in **descending order by GitHub Stars_Count** ⭐.
+Self-hosted, transparent, and community-driven tools for backing up Windows Server and Workstation environments to local storage, NAS/SAN, or cloud object storage. All listed projects are sorted in **descending order by GitHub_Stars_Count** ⭐.
 
 | 🧰 Tool | ⭐ GitHub_Stars | 💻 Primary Language / Stack | 📜 License | 📸 Windows Snapshot (VSS) | 🌐 Primary Cloud Targets |
 |:---|:---|:---|:---|:---|:---|
@@ -194,7 +194,7 @@ Contributions are warmly welcomed! If you know of an active open-source Windows 
 
 1. 🍴 Fork the repository.
 2. ✍️ Add the tool to the appropriate section maintaining alphabetical or sorted conventions.
-3. 🔗 Include project URL, GitHub Stars_Badge, license, and Windows integration details.
+3. 🔗 Include project URL, GitHub_Stars_Badge, license, and Windows integration details.
 4. 🚀 Submit a Pull Request with a concise summary of the addition.
 
 ---
